@@ -1,0 +1,31 @@
+=======================================================================
+File name: {$DATA_FILE_NAME}
+File path: {$DATA_FILE_PATH}
+-----------------------------------------------------------------------
+Sample count: {$DATA_SAMPLE_COUNT}
+
+------------------------- Absolute features ---------------------------
+Feature\Sample		{$DATA_SAMPLE_LIST}
+Cell count			{$DATA_CELL_COUNT_LIST}
+Length average		{$DATA_LENGTH_MEAN_LIST}
+Length min			{$DATA_LENGTH_MIN_LIST}
+Length max			{$DATA_LENGTH_MAX_LIST}
+Area average		{$DATA_AREA_MEAN_LIST}
+Area min			{$DATA_AREA_MIN_LIST}
+Area max			{$DATA_AREA_MAX_LIST}
+Pixel density		{$DATA_PIXDEN_LIST}
+
+------------------------- Relative features ---------------------------
+Cell count			{$DATAR_CELL_COUNT_LIST}
+Length average		{$DATAR_LENGTH_MEAN_LIST}
+Area average		{$DATAR_AREA_MEAN_LIST}
+Pixel density		{$DATAR_PIXDEN_LIST}
+
+---------------------------- Sensitivity ------------------------------
+{$DATA_SENSITIVITY_HEADER}
+{$DATA_SENSITIVITY}
+
+---------------------------- HISTOGRAM  -------------------------------
+Cell length distribution
+{$HISTOGRAM_HEADER}
+{$HISTOGRAM_DATA}

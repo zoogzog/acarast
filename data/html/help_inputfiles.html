@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Adding files to the project</h2>
+
+<b>How to add files</b><br>
+There are three ways to add file to the project. If it is necessary to process only a single image file the easiest way is to
+click the <b>Open file</b> button (<img src="../graphics/select_file.png" alt="Open file">), which creates a new projects and add
+the specified file. Clicking this button will erase the existing project, so to add one more file to the current project the 
+<b>Add file</b> button (<img src="../graphics/select_file_add.png" alt="Add file">) has to be clicked. Finally if the task is to process
+a bunch of files located in the same directory, it could be done by selecting the <b>Open folder</b> menu or clicking the corresponding 
+button (<img src="../graphics/select_folder.png" alt="open folder">). All images added to the current project could be viewed by selecting
+the corresponding image in the Project Manager.
+<br><br>
+
+<b>Image requirements</b><br>
+The Cell Analyzer was mainly developed to process images acquired with the MDCE-5c USB camera. Images captured with other cameras could be
+processed as well if they satisfy the following requirements.
+<br><br>
+<ul>
+	<li> Input image should contain one control and at least one sample.</li>
+	<li> All samples are oriented roughly vertically and represented as strips.</li>
+	<li> Distance between two neighboring samples is the same for each pair of neighbors.</li>
+	<li> Width of the sample strips is the same for all samples.</li>
+	<li> Bacteria cells are represented as small black areas.</li>
+</ul>
+<br><br>
+
+<center>
+<img src="../graphics/image_example.png" alt="system">
+<br>
+Example of the input image
+</center>
+<br>
+<br>
+
+For accurate cell detection and feature extraction it is important to have a clear input image. Thus it is crucial to prepare an input image
+where all cells and sample borders are easily separated from the background and as much as possible are not overlapped with each other.
+
+</body>
+</html>

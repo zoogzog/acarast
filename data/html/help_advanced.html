@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Advanced Settings</h2>
+
+Advanced settings could be accessed by selecting the <b>Settings</b> option in the <b>Help</b> menu. 
+By tuning the settings it is possible to increase the sample and cell detection accuracy for a particular noisy or
+poorly illuminated sample.
+<br>
+<br>
+
+The settings menu is separated into four categories: image processing, sample detection, cell detection and feature extraction.
+It is suggested that in case if the system could not correctly detect cell samples to change the <b>Sample Detector Settings</b>
+and if it is necessary to increase the accuracy of cell detection <b>Cell Detector Settings</b> has to be tuned.
+<br>
+<br>
+
+<b>Image Processing Settings</b><br>
+<ul>
+	<li><b>Gaussian kernel size</b> represents the kernel size in <b>pixels</b> of the gaussian filter which used for correction image illumination.
+	Small values of this parameter could correct illumination more efficiently, however information about some bacteria cells could be lost.</li>
+	
+	<li><b>Canny edge threshold</b> is the <b>intensity</b> level which used for detecting the edges of the image. Lowering this value could help
+	to detect image cell samples correctly.</li>
+	
+	<li><b>Dilate kernel size</b> is the size of dilation filter in <b>pixels</b>. Increasing this value could also help to detect cell samples.</li>
+	
+	<li><b>Local threshold kernel size</b> parameter is used for correctly detecting cells on the image and not treating noise as cells. It is assumed
+	that cells are consist of dark pixels, so if in the area of some pixel, specified by <b>Local threshold kernel size</b> there is not dark
+	pixels which less then <b>Local threshold condition</b> this pixel's intensity is changed to be the <b>Local threshold</b> value.Thus
+	increasing the <b>Local threshold kernel size</b> will make more pixels to be treated as bacteria cells.</li>
+	
+	<li><b>Local threshold condition</b> represents the <b>intensity</b> level condition for local thresholding (see <b>Local threshold kernel size</b>).
+	 Increasing this value will make more pixels to be treated as cells.</li>
+	 
+	<li><b>Local threshold destination value</b> specifies the <b>intensity</b> which will be assigned to a pixel if it does not satisfy
+	the <b>Local threshold condition</b>. It is recommended not to change this parameter. For more information see <b>Local threshold kernel size</b> parameter.</li>
+	
+	<li><b>Global threshold</b> is the <b>intensity</b> parameter for an ordinary thresholding.</li>
+</ul><br>
+
+<b>Sample Detector Settings</b><br>
+<ul>
+	<li><b>Hough transform rho</b> is a distance parameter of the Hough transform</li>
+	<li><b>Hough transform theta</b> is an angle parameter of the Hough transform</li>
+	<li><b>Hough transform threshold</b> is a threshold parameter for lines detected with the Hough transform</li>
+	<li><b>Hough transform min length</b> is a minimum length of the segment to be detected as line. Increasing this parameter could help to
+	detect sample correctly</li>
+	<li><b>Hough transform max gap</b> is a maximum gap between segments to be merge. Lowering this value could help to detec sample borders.</li>
+	<li><b>Offset to narrow sample</b> specifies the amount of pixels on which all borders will be moved to narrow down the sample widths. Narrowing samples
+	is necessary in order to not to detect sample border pixels as cell pixels.</li>
+	<li><b>Sample border width</b> is the width of sample border in pixels. Setting this parameter correctly will increase accuracy of the sample 
+	border estimation</li>
+	<li><b>Border intensity drop min</b> and <b>Border intensity drop max</b> represent the drop intensity on the border, 
+	lowering the minimum and increasing the maximum parameter could help to detect samples.</li>
+</ul><br>
+
+<b>Cell Detector Settings</b><br>
+<ul>
+	<li><b>Min bacteria size</b> specifies the minimum size of cells in <b>pixels</b>. All detected objects with size less then specified will be treated
+	as noise.</li>
+	
+	<li><b>Max cell distance</b> is the maximum distance in <b>pixels</b> between cells</li>
+	<li><b>Max angle between cells</b></li>
+</ul><br>
+
+<b>Feature Extractor Settings</b><br>
+<ul>
+	<li><b>Frequency histogram steps</b> is the amount of bins in the length frequency histogram</li>
+	<li><b>Confidence interval</b> is the desirable maximum amount of the bacteria cells with certain length in the interval.</li>
+</ul>
+
+
+</body>
+</html>

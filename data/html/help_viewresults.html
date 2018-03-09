@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Viewing results</h2>
+<br>
+
+<b>Viewing images</b><br>
+The are several ways to check the results of cell detection and feature extraction. Detected samples could be viewed by selecting
+them from the sample box in the <b>Project manager</b>. The detected cells could be viewed by choosing the <b>Show detected cells</b>
+or <b>Show colored cells</b> options in the <b>View</b> menu. The first method will draw boundary boxes around detected cells and 
+the second one will colored cells on a black background. The image with boundary boxes could also be viewed by clicking the 
+<b>View cells</b> button (<img src="../graphics/o_image.png" alt="View cells">).
+<br><br>
+
+<b>Extracted features</b>
+Features, extracted from the detected cells could be viewed in the <b>Output viewer</b>. All the features are divided into three categories:
+length frequency histogram, absolute features and relative features. The length frequency histogram represents the frequency of cells of each 
+particular length. Absolute features are features extracted from the sample and relative features are sample features in relation to control sample
+features.<br><br>
+
+<b>Absolute features</b>
+<ul>
+	<li><b>Cell count</b> total amount of detected cells</li>
+	
+	<li><b>Cell length</b> features are average, minimum and maximum cell lengths</li>
+	
+	<li><b>Interval</b> is a confidence interval, where X amount of bacteria with the length in this interval are located. X is specified by the parameter
+	<b>Confidence interval</b> in the <b>Settings</b> menu.</li>
+	
+	<li><b>Cell area</b> features are an average, minimum and maximum cell areas</li>
+	
+	<li><b>Average width</b> is an average cell width</li>
+	
+	<li><b>Length deviation</b> is the standard deviation of the cell lengths</li>
+	
+	<li><b>Total pixel density</b> is a relation between amount of pixels which are cells and total amount of pixels of the selected sample</li>
+	
+	<li><b>Shape descriptor</b> represents how close the cell shape to a line. The close it is the closer the value to 1.</li>
+
+</ul>
+
+<br>
+
+<b>Relative features</b>
+<ul>
+	<li><b>Total cell count</b> is a cell count of the sample divided on cell count of the controls sample</li>
+	<li><b>Equal to control</b> is amount of cells from the sample which length is in the confidence interval of the control sample</li>
+	<li><b>Average length</b> is test sample average length divided on control sample average length</li>
+	<li><b>Length deviation</b> is length deviation in relation to the control sample</li>
+	<li><b>Average area</b> is the average area of the test sample divided on average area of the control sample</li>
+	<li><b>Total pixel density</b> is the pixel density of the test sample divided on the pixel density of the control sample</li>
+	<li><b>Interval length</b> is a relation between the test sample confidence length interval and the control sample interval</li>
+	<li><b>Shape descriptor</b> is a test sample shape descriptor divded on the control sample descriptor</li>
+	<li><b>Level of difference</b> represents how different is the test sample from the control sample. The closer the value to 0 the closer
+	the sample to the control sample</li>
+
+</ul>
+
+<br>
+<br>
+
+
+</body>
+</html>
